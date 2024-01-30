@@ -21,7 +21,7 @@ $(".container").on("click", ".saveBtn", function () {
         localStorage.setItem(hour, eventText);
     });
 
-    / Function to load events from local storage
+    // Function to load events from local storage
     function loadEvents() {
         $(".time-block").each(function () {
             var hour = $(this).find(".hour").text().trim();
@@ -32,3 +32,7 @@ $(".container").on("click", ".saveBtn", function () {
             }
         });
     }
+// Call functions to initialize the application
+displayCurrentDay();
+loadEvents();
+});
