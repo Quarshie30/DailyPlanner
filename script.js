@@ -11,4 +11,8 @@ $(document).ready(function () {
    function formatHour(hour) {
     return dayjs().hour(hour).format("h A");
 }
-
+// Event listener for save button clicks
+$(".container").on("click", ".saveBtn", function () {
+    var textArea = $(this).siblings(".description");
+    var hour = $(this).siblings(".hour").text().trim();
+    var eventText = textArea.val();
