@@ -16,3 +16,7 @@ $(".container").on("click", ".saveBtn", function () {
     var textArea = $(this).siblings(".description");
     var hour = $(this).siblings(".hour").text().trim();
     var eventText = textArea.val();
+
+ // Save the event in local storage
+        localStorage.setItem(hour, eventText);
+    });
